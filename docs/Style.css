@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root {
+    --appliance-navy: #0E152B;
+    --appliance-blue: #6eaadc;
+    --appliance-blue-soft: #9bc7ef;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+}
+
+img,
+button,
+a,
+video {
+    user-select: none;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+    transition: all 220ms ease;
+}
+
+::selection {
+    background: rgba(110, 170, 220, 0.3);
+    color: #0E152B;
+}
+
+.appliance-hero {
+    position: relative;
+}
+
+
+.appliance-hero__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.appliance-hero__overlay {
+    position: absolute;
+    inset: 0;
+    /* background:
+        linear-gradient(115deg, rgba(0, 0, 0, 0.42) 8%, rgba(0, 0, 0, 0.2) 38%, rgba(0, 0, 0, 0.32) 68%, rgba(9, 13, 27, 0.32) 100%),
+        radial-gradient(circle at 18% 55%, rgba(110, 170, 220, 0.24), transparent 24%),
+        radial-gradient(circle at 82% 18%, rgba(110, 170, 220, 0.16), transparent 20%); */
+}
+
+.appliance-hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 34px 34px;
+    opacity: 0.24;
+}
+
+.appliance-hero__glow {
+    position: absolute;
+    right: -8%;
+    bottom: -18%;
+    width: 34rem;
+    height: 34rem;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(110, 170, 220, 0.24), transparent 68%);
+    filter: blur(18px);
+    opacity: 0.85;
+}
+
+@media (max-width: 767px) {
+    .appliance-hero__shell {
+        min-height: 88vh;
+    }
+
+    .appliance-hero__glow {
+        width: 20rem;
+        height: 20rem;
+        right: -20%;
+        bottom: -10%;
+    }
+}
+.site-header {
+    pointer-events: none;
+}
+
+.site-header__shell {
+    pointer-events: auto;
+}
+
+.site-header__inner {
+    transition: max-width 280ms ease;
+}
+
+.site-header__nav {
+    box-shadow: 0 18px 40px rgba(8, 16, 33, 0.12);
+}
+
+.site-header.is-scrolled .site-header__inner {
+    max-width: 80rem;
+}
+
+.site-header.is-scrolled .site-header__nav {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.site-header.is-scrolled .site-header__shell {
+    border-color: rgba(226, 232, 240, 0.95);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 24px 55px rgba(15, 23, 42, 0.14);
+}
+
+.site-header.is-scrolled .site-header__nav-link {
+    color: rgba(51, 65, 85, 0.92) !important;
+}
+
+.site-header.is-scrolled .site-header__nav-link:hover,
+.site-header.is-scrolled .site-header__nav-link--active {
+    background: rgba(110, 170, 220, 0.14) !important;
+    color: #0E152B !important;
+}
+
+.site-header.is-scrolled .site-header__phone {
+    background: #0E152B;
+    color: #ffffff;
+}
+
+.site-header.is-scrolled .site-header__phone:hover {
+    background: #182345;
+}
+
+.site-header.is-scrolled .site-header__phone-icon {
+    background: #6eaadc;
+    color: #0E152B;
+}
+
+
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-toggle-icon {
+    transition: transform 220ms ease, background-color 220ms ease, color 220ms ease;
+}
+
+.faq-item[open] .faq-toggle-icon {
+    transform: rotate(45deg);
+    background: rgba(110, 170, 220, 0.18);
+    color: #0E152B;
+}
