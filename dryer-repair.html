@@ -24,35 +24,24 @@
 </head>
 
 <body class="is-loading text-slate-900 antialiased">
-        <div id="siteLoader" class="site-loader" aria-hidden="true">
-        <div class="site-loader__panel">
-            <div class="site-loader__brand-row">
-                <div class="site-loader__brand-mark">
-                    <img src="./docs/assets/favicon.png" alt="Appliance Repair Silver Spring icon" class="site-loader__brand-icon" />
-                </div>
-                <div class="site-loader__brand-copy">
-                    <p class="site-loader__eyebrow">Appliance Repair Silver Spring</p>
-                    <h2 class="site-loader__title">Loading trusted local appliance repair.</h2>
-                </div>
-            </div>
-
-            <p class="site-loader__text">
-                Fast support for washers, dryers, refrigerators, ovens, stoves, and dishwashers across Silver Spring.
-            </p>
-
-            <div class="site-loader__progress-wrap">
-                <div class="site-loader__ring" data-loader-ring>
-                    <div class="site-loader__ring-inner">
-                        <span class="site-loader__value" data-loader-value>1%</span>
-                    </div>
-                </div>
-
-                <div class="site-loader__bar">
-                    <span class="site-loader__bar-fill" data-loader-fill></span>
-                </div>
-            </div>
-        </div>
+    <div id="siteLoader" class="site-loader" aria-hidden="true">
+    <div id="wifi-loader">
+        <svg class="circle-outer" viewBox="0 0 86 86" aria-hidden="true">
+            <circle class="back" cx="43" cy="43" r="40"></circle>
+            <circle class="front" cx="43" cy="43" r="40"></circle>
+            <circle class="new" cx="43" cy="43" r="40"></circle>
+        </svg>
+        <svg class="circle-middle" viewBox="0 0 60 60" aria-hidden="true">
+            <circle class="back" cx="30" cy="30" r="27"></circle>
+            <circle class="front" cx="30" cy="30" r="27"></circle>
+        </svg>
+        <svg class="circle-inner" viewBox="0 0 34 34" aria-hidden="true">
+            <circle class="back" cx="17" cy="17" r="14"></circle>
+            <circle class="front" cx="17" cy="17" r="14"></circle>
+        </svg>
+        <div class="text" data-text="Loading"></div>
     </div>
+</div>
     <main>
 
         <!-- Hero Section -->
@@ -428,6 +417,10 @@
     </main>
 
     <div id="footer"></div>
+    <button id="toTopBtn" type="button" aria-label="Back to top"
+        class="fixed bottom-5 right-5 z-[90] flex h-12 w-12 items-center justify-center rounded-full bg-[#0E152B] text-white shadow-[0_18px_40px_rgba(15,23,42,0.22)] transition-all duration-300 hover:bg-[#182345] opacity-0 translate-y-4 pointer-events-none sm:bottom-6 sm:right-6 sm:h-14 sm:w-14">
+        <i class="fa-solid fa-arrow-up text-sm sm:text-base"></i>
+    </button>
 
     <script src="./docs/javascript/Footer.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -450,6 +443,9 @@
 </body>
 
 </html>
+
+
+
 
 
 

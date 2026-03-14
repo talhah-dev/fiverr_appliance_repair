@@ -2,29 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const siteLoader = document.getElementById("siteLoader");
 
   if (siteLoader) {
-    const loaderValue = siteLoader.querySelector("[data-loader-value]");
-    const loaderFill = siteLoader.querySelector("[data-loader-fill]");
-    const loaderRing = siteLoader.querySelector("[data-loader-ring]");
-    let loaderProgressDone = false;
-    let pageReady = document.readyState === "complete";
-    let loaderRemoved = false;
-
-    const updateLoaderProgress = (value) => {
-      const safeValue = Math.max(1, Math.min(100, value));
-      if (loaderValue) {
-        loaderValue.textContent = safeValue + "%";
-      }
-      if (loaderFill) {
-        loaderFill.style.width = safeValue + "%";
-      }
-      if (loaderRing) {
-        loaderRing.style.setProperty("--loader-progress", safeValue);
-      }
-    };
-
     const hideLoader = () => {
-      if (loaderRemoved || !pageReady || !loaderProgressDone) return;
-      loaderRemoved = true;
       siteLoader.classList.add("is-hidden");
       document.body.classList.remove("is-loading");
 
@@ -33,50 +11,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 460);
     };
 
-    updateLoaderProgress(1);
-
-    const progressDuration = 1800;
-    const progressStart = performance.now();
-
-    const animateProgress = (currentTime) => {
-      const progress = Math.min((currentTime - progressStart) / progressDuration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const value = Math.max(1, Math.round(eased * 100));
-      updateLoaderProgress(value);
-
-      if (progress < 1) {
-        requestAnimationFrame(animateProgress);
-      } else {
-        loaderProgressDone = true;
-        hideLoader();
-      }
-    };
-
-    requestAnimationFrame(animateProgress);
-
-    const markPageReady = () => {
-      pageReady = true;
-      hideLoader();
-    };
-
     if (document.readyState === "complete") {
-      window.setTimeout(markPageReady, 120);
+      window.setTimeout(hideLoader, 220);
     } else {
       window.addEventListener(
         "load",
         () => {
-          window.setTimeout(markPageReady, 120);
+          window.setTimeout(hideLoader, 220);
         },
         { once: true }
       );
-    }
 
-    window.setTimeout(() => {
-      loaderProgressDone = true;
-      pageReady = true;
-      updateLoaderProgress(100);
-      hideLoader();
-    }, 2800);
+      window.setTimeout(hideLoader, 2400);
+    }
   }
   if (window.Lenis) {
     new Lenis({
@@ -295,6 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 
 
