@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -125,65 +125,180 @@
     <div class="site-header__inner mx-auto max-w-[1560px]">
         <div class="site-header__shell rounded-[1.6rem] px-4 py-3 transition duration-300">
             <div class="flex items-center justify-between gap-4">
-                <a href="./index.html" data-aos="fade-up" class="inline-flex items-center">
-                    <img src="./docs/assets/logo.png" alt="Appliance Repair Silver Spring logo"
-                        class="h-8 w-auto sm:h-9" />
+                <a href="./index.html" class="inline-flex items-center">
+                    <img src="./docs/assets/logo.png" alt="Appliance Repair Silver Spring logo" class="h-8 w-auto sm:h-9" />
                 </a>
 
-                <nav data-aos="fade-up" data-aos-delay="80"
-                    class="site-header__nav hidden items-center justify-center gap-1 rounded-full px-3 py-2 lg:flex lg:mx-auto">
+                <nav class="site-header__nav hidden items-center justify-center gap-1 rounded-full px-3 py-2 lg:mx-auto lg:flex">
                     <a href="./index.html" class="site-header__nav-link rounded-full px-4 py-2 text-sm font-medium transition">Home</a>
                     <a href="./about.html" class="site-header__nav-link rounded-full px-4 py-2 text-sm font-medium transition">About</a>
                     <div class="site-header__dropdown relative hidden lg:block">
-    <a href="./services.html" class="site-header__nav-link site-header__nav-link--active inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition">
-        <span>Services</span>
-        <i class="site-header__dropdown-chevron fa-solid fa-chevron-down text-[10px]"></i>
-    </a>
-    <div class="site-header__dropdown-menu absolute left-1/2 top-full z-20 w-[19rem] -translate-x-1/2 pt-3">
-        <div class="site-header__dropdown-panel rounded-[1.4rem] border border-slate-200 bg-white p-3 shadow-[0_22px_48px_rgba(15,23,42,0.14)]">
-            <div class="grid gap-1">
-                <a href="./washer-repair.html" class="site-header__dropdown-link flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium transition"><span>Washer Repair</span><i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-                <a href="./dryer-repair.html" class="site-header__dropdown-link flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium transition"><span>Dryer Repair</span><i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-                <a href="./refrigerator-repair.html" class="site-header__dropdown-link flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium transition"><span>Refrigerator Repair</span><i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-                <a href="./oven-repair.html" class="site-header__dropdown-link flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium transition"><span>Oven Repair</span><i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-                <a href="./stove-repair.html" class="site-header__dropdown-link flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium transition"><span>Stove Repair</span><i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-                <a href="./dishwasher-repair.html" class="site-header__dropdown-link flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium transition"><span>Dishwasher Repair</span><i class="fa-solid fa-arrow-right text-[10px]"></i></a>
-            </div>
-        </div>
-    </div>
-</div>
+                        <a href="./services.html" class="site-header__nav-link rounded-full px-4 py-2 text-sm font-medium transition site-header__nav-link--active inline-flex items-center gap-2">
+                            <span>Services</span>
+                            <span class="site-header__dropdown-trigger-dot flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-[#0E152B]">
+                                <i class="site-header__dropdown-chevron fa-solid fa-chevron-down text-[10px]"></i>
+                            </span>
+                        </a>
+                        <div class="site-header__dropdown-menu absolute left-1/2 top-full z-20 w-[23rem] -translate-x-1/2 pt-3">
+                            <div class="site-header__dropdown-panel rounded-[1.5rem] border border-slate-200 bg-white p-3 shadow-[0_24px_52px_rgba(15,23,42,0.16)]">
+                                <div class="grid gap-1">
+                                    <a href="./services.html" class="site-header__dropdown-link flex items-start gap-3 rounded-[1.2rem] p-3 transition site-header__dropdown-link--active">
+                                        <span class="site-header__dropdown-icon flex h-11 w-11 shrink-0 items-center justify-center rounded-[1rem] border border-[#6eaadc]/20 bg-[#6eaadc]/10 text-[#0E152B]">
+                                            <i class="fa-solid fa-screwdriver-wrench text-sm"></i>
+                                        </span>
+                                        <span class="min-w-0 flex-1">
+                                            <span class="block text-sm font-semibold text-slate-800">All Services</span>
+                                            <span class="site-header__dropdown-support mt-1 block text-xs text-slate-500">Explore appliance repair solutions for common home systems.</span>
+                                        </span>
+                                        <span class="site-header__dropdown-arrow flex h-10 w-10 shrink-0 items-center justify-center rounded-[0.95rem] border border-slate-200 bg-slate-50 text-slate-500">
+                                            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                                        </span>
+                                    </a>
+                                    <a href="./washer-repair.html" class="site-header__dropdown-link flex items-start gap-3 rounded-[1.2rem] p-3 transition">
+                                        <span class="site-header__dropdown-icon flex h-11 w-11 shrink-0 items-center justify-center rounded-[1rem] border border-[#6eaadc]/20 bg-[#6eaadc]/10 text-[#0E152B]">
+                                            <i class="fa-solid fa-droplet text-sm"></i>
+                                        </span>
+                                        <span class="min-w-0 flex-1">
+                                            <span class="block text-sm font-semibold text-slate-800">Washer Repair</span>
+                                            <span class="site-header__dropdown-support mt-1 block text-xs text-slate-500">Leaks, draining issues, spinning problems, and startup faults.</span>
+                                        </span>
+                                        <span class="site-header__dropdown-arrow flex h-10 w-10 shrink-0 items-center justify-center rounded-[0.95rem] border border-slate-200 bg-slate-50 text-slate-500">
+                                            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                                        </span>
+                                    </a>
+                                    <a href="./dryer-repair.html" class="site-header__dropdown-link flex items-start gap-3 rounded-[1.2rem] p-3 transition">
+                                        <span class="site-header__dropdown-icon flex h-11 w-11 shrink-0 items-center justify-center rounded-[1rem] border border-[#6eaadc]/20 bg-[#6eaadc]/10 text-[#0E152B]">
+                                            <i class="fa-solid fa-wind text-sm"></i>
+                                        </span>
+                                        <span class="min-w-0 flex-1">
+                                            <span class="block text-sm font-semibold text-slate-800">Dryer Repair</span>
+                                            <span class="site-header__dropdown-support mt-1 block text-xs text-slate-500">Poor heating, long dry cycles, odd noise, and airflow concerns.</span>
+                                        </span>
+                                        <span class="site-header__dropdown-arrow flex h-10 w-10 shrink-0 items-center justify-center rounded-[0.95rem] border border-slate-200 bg-slate-50 text-slate-500">
+                                            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                                        </span>
+                                    </a>
+                                    <a href="./refrigerator-repair.html" class="site-header__dropdown-link flex items-start gap-3 rounded-[1.2rem] p-3 transition">
+                                        <span class="site-header__dropdown-icon flex h-11 w-11 shrink-0 items-center justify-center rounded-[1rem] border border-[#6eaadc]/20 bg-[#6eaadc]/10 text-[#0E152B]">
+                                            <i class="fa-solid fa-snowflake text-sm"></i>
+                                        </span>
+                                        <span class="min-w-0 flex-1">
+                                            <span class="block text-sm font-semibold text-slate-800">Refrigerator Repair</span>
+                                            <span class="site-header__dropdown-support mt-1 block text-xs text-slate-500">Cooling problems, temperature swings, and fresh food issues.</span>
+                                        </span>
+                                        <span class="site-header__dropdown-arrow flex h-10 w-10 shrink-0 items-center justify-center rounded-[0.95rem] border border-slate-200 bg-slate-50 text-slate-500">
+                                            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                                        </span>
+                                    </a>
+                                    <a href="./oven-repair.html" class="site-header__dropdown-link flex items-start gap-3 rounded-[1.2rem] p-3 transition">
+                                        <span class="site-header__dropdown-icon flex h-11 w-11 shrink-0 items-center justify-center rounded-[1rem] border border-[#6eaadc]/20 bg-[#6eaadc]/10 text-[#0E152B]">
+                                            <i class="fa-solid fa-fire-burner text-sm"></i>
+                                        </span>
+                                        <span class="min-w-0 flex-1">
+                                            <span class="block text-sm font-semibold text-slate-800">Oven Repair</span>
+                                            <span class="site-header__dropdown-support mt-1 block text-xs text-slate-500">Uneven heating, ignition trouble, and temperature accuracy checks.</span>
+                                        </span>
+                                        <span class="site-header__dropdown-arrow flex h-10 w-10 shrink-0 items-center justify-center rounded-[0.95rem] border border-slate-200 bg-slate-50 text-slate-500">
+                                            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                                        </span>
+                                    </a>
+                                    <a href="./stove-repair.html" class="site-header__dropdown-link flex items-start gap-3 rounded-[1.2rem] p-3 transition">
+                                        <span class="site-header__dropdown-icon flex h-11 w-11 shrink-0 items-center justify-center rounded-[1rem] border border-[#6eaadc]/20 bg-[#6eaadc]/10 text-[#0E152B]">
+                                            <i class="fa-solid fa-fire-flame-curved text-sm"></i>
+                                        </span>
+                                        <span class="min-w-0 flex-1">
+                                            <span class="block text-sm font-semibold text-slate-800">Stove Repair</span>
+                                            <span class="site-header__dropdown-support mt-1 block text-xs text-slate-500">Burner problems, element failures, and dependable cooktop repair.</span>
+                                        </span>
+                                        <span class="site-header__dropdown-arrow flex h-10 w-10 shrink-0 items-center justify-center rounded-[0.95rem] border border-slate-200 bg-slate-50 text-slate-500">
+                                            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                                        </span>
+                                    </a>
+                                    <a href="./dishwasher-repair.html" class="site-header__dropdown-link flex items-start gap-3 rounded-[1.2rem] p-3 transition">
+                                        <span class="site-header__dropdown-icon flex h-11 w-11 shrink-0 items-center justify-center rounded-[1rem] border border-[#6eaadc]/20 bg-[#6eaadc]/10 text-[#0E152B]">
+                                            <i class="fa-solid fa-utensils text-sm"></i>
+                                        </span>
+                                        <span class="min-w-0 flex-1">
+                                            <span class="block text-sm font-semibold text-slate-800">Dishwasher Repair</span>
+                                            <span class="site-header__dropdown-support mt-1 block text-xs text-slate-500">Cleaning issues, drainage trouble, and cycle performance support.</span>
+                                        </span>
+                                        <span class="site-header__dropdown-arrow flex h-10 w-10 shrink-0 items-center justify-center rounded-[0.95rem] border border-slate-200 bg-slate-50 text-slate-500">
+                                            <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <a href="./faq.html" class="site-header__nav-link rounded-full px-4 py-2 text-sm font-medium transition">FAQ</a>
                     <a href="./contact.html" class="site-header__nav-link rounded-full px-4 py-2 text-sm font-medium transition">Contact</a>
                 </nav>
 
                 <div class="flex items-center gap-3">
-                    <a href="tel:2404387799" data-aos="zoom-in" data-aos-delay="140"
-                        class="site-header__phone hidden lg:inline-flex items-center justify-center gap-3 rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition sm:px-2 md:pl-4 sm:text-sm xl:justify-self-end">
+                    <a href="tel:2404387799" class="site-header__phone hidden items-center justify-center gap-3 rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] transition sm:px-2 sm:text-sm md:pl-4 lg:inline-flex xl:justify-self-end">
                         <span>Call Now</span>
-                        <span
-                            class="site-header__phone-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-full">
+                        <span class="site-header__phone-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-full">
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </span>
                     </a>
 
-                    <button id="menuBtn" type="button" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false"
-                        class="site-header__menu-btn relative inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full lg:hidden">
+                    <button id="menuBtn" type="button" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false" class="site-header__menu-btn relative inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full lg:hidden">
                         <i data-menu-open-icon class="fa-solid fa-bars-staggered text-sm"></i>
                         <i data-menu-close-icon class="fa-solid fa-xmark absolute text-base opacity-0 scale-75"></i>
                     </button>
                 </div>
             </div>
 
-            <div id="mobileMenu"
-                class="site-header__mobile-menu lg:hidden overflow-hidden max-h-0 opacity-0 pointer-events-none transition-all duration-300 ease-out">
-                <div class="site-header__mobile-panel mt-4 rounded-[1.5rem] border p-3 shadow-[0_18px_40px_rgba(8,16,33,0.16)] backdrop-blur-md">
-                    <div class="flex flex-col gap-1">
+            <div id="mobileMenu" aria-hidden="true" class="site-header__mobile-menu lg:hidden">
+                <div class="site-header__mobile-panel">
+                    <div class="site-header__mobile-top flex items-center justify-between gap-4 border-b border-slate-200 pb-5">
+                        <a href="./index.html" class="inline-flex items-center">
+                            <img src="./docs/assets/logo.png" alt="Appliance Repair Silver Spring logo" class="h-9 w-auto" />
+                        </a>
+                        <button id="mobileMenuClose" type="button" aria-label="Close menu" class="site-header__mobile-close inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-slate-100 text-[#0E152B]">
+                            <i class="fa-solid fa-xmark text-base"></i>
+                        </button>
+                    </div>
+
+                    <nav class="mt-6 flex flex-col gap-2">
                         <a href="./index.html" class="site-header__mobile-link rounded-2xl px-4 py-3 text-sm font-medium">Home</a>
                         <a href="./about.html" class="site-header__mobile-link rounded-2xl px-4 py-3 text-sm font-medium">About</a>
-                        <a href="./services.html" class="site-header__mobile-link site-header__mobile-link--active rounded-2xl px-4 py-3 text-sm font-medium">Services</a>
+                        <div class="site-header__mobile-services-block rounded-[1.4rem] border border-slate-200 bg-slate-50 p-2 site-header__mobile-services-block--active">
+                            <p class="site-header__mobile-section-label px-3 pb-2 pt-1 text-xs font-semibold uppercase tracking-[0.24em] text-[#6eaadc]">Services</p>
+                            <div class="grid gap-1">
+                            <a href="./services.html" class="site-header__mobile-sublink flex items-center justify-between gap-3 rounded-[1rem] px-3 py-3 text-sm font-medium transition site-header__mobile-sublink--active">
+                                <span>All Services</span>
+                                <i class="fa-solid fa-arrow-right text-[11px] opacity-70"></i>
+                            </a>
+                            <a href="./washer-repair.html" class="site-header__mobile-sublink flex items-center justify-between gap-3 rounded-[1rem] px-3 py-3 text-sm font-medium transition">
+                                <span>Washer Repair</span>
+                                <i class="fa-solid fa-arrow-right text-[11px] opacity-70"></i>
+                            </a>
+                            <a href="./dryer-repair.html" class="site-header__mobile-sublink flex items-center justify-between gap-3 rounded-[1rem] px-3 py-3 text-sm font-medium transition">
+                                <span>Dryer Repair</span>
+                                <i class="fa-solid fa-arrow-right text-[11px] opacity-70"></i>
+                            </a>
+                            <a href="./refrigerator-repair.html" class="site-header__mobile-sublink flex items-center justify-between gap-3 rounded-[1rem] px-3 py-3 text-sm font-medium transition">
+                                <span>Refrigerator Repair</span>
+                                <i class="fa-solid fa-arrow-right text-[11px] opacity-70"></i>
+                            </a>
+                            <a href="./oven-repair.html" class="site-header__mobile-sublink flex items-center justify-between gap-3 rounded-[1rem] px-3 py-3 text-sm font-medium transition">
+                                <span>Oven Repair</span>
+                                <i class="fa-solid fa-arrow-right text-[11px] opacity-70"></i>
+                            </a>
+                            <a href="./stove-repair.html" class="site-header__mobile-sublink flex items-center justify-between gap-3 rounded-[1rem] px-3 py-3 text-sm font-medium transition">
+                                <span>Stove Repair</span>
+                                <i class="fa-solid fa-arrow-right text-[11px] opacity-70"></i>
+                            </a>
+                            <a href="./dishwasher-repair.html" class="site-header__mobile-sublink flex items-center justify-between gap-3 rounded-[1rem] px-3 py-3 text-sm font-medium transition">
+                                <span>Dishwasher Repair</span>
+                                <i class="fa-solid fa-arrow-right text-[11px] opacity-70"></i>
+                            </a>
+                            </div>
+                        </div>
                         <a href="./faq.html" class="site-header__mobile-link rounded-2xl px-4 py-3 text-sm font-medium">FAQ</a>
                         <a href="./contact.html" class="site-header__mobile-link rounded-2xl px-4 py-3 text-sm font-medium">Contact</a>
-                    </div>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -476,6 +591,10 @@
 </body>
 
 </html>
+
+
+
+
 
 
 
