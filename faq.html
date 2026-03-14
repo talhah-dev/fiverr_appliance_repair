@@ -23,7 +23,36 @@
     <link rel="stylesheet" href="./docs/Style.css" />
 </head>
 
-<body class="text-slate-900 antialiased">
+<body class="is-loading text-slate-900 antialiased">
+        <div id="siteLoader" class="site-loader" aria-hidden="true">
+        <div class="site-loader__panel">
+            <div class="site-loader__brand-row">
+                <div class="site-loader__brand-mark">
+                    <img src="./docs/assets/favicon.png" alt="Appliance Repair Silver Spring icon" class="site-loader__brand-icon" />
+                </div>
+                <div class="site-loader__brand-copy">
+                    <p class="site-loader__eyebrow">Appliance Repair Silver Spring</p>
+                    <h2 class="site-loader__title">Loading trusted local appliance repair.</h2>
+                </div>
+            </div>
+
+            <p class="site-loader__text">
+                Fast support for washers, dryers, refrigerators, ovens, stoves, and dishwashers across Silver Spring.
+            </p>
+
+            <div class="site-loader__progress-wrap">
+                <div class="site-loader__ring" data-loader-ring>
+                    <div class="site-loader__ring-inner">
+                        <span class="site-loader__value" data-loader-value>1%</span>
+                    </div>
+                </div>
+
+                <div class="site-loader__bar">
+                    <span class="site-loader__bar-fill" data-loader-fill></span>
+                </div>
+            </div>
+        </div>
+    </div>
     <main>
 
         <!-- Hero Section -->
@@ -38,37 +67,56 @@
 
                 <div class="relative min-h-[70vh] px-5 pb-12 pt-5 sm:px-8 lg:px-10 xl:px-12">
                     <div id="siteHeader" class="site-header fixed inset-x-0 top-0 z-[80] px-4 pt-4 sm:px-6 sm:pt-6 lg:px-8">
-                        <div class="site-header__inner mx-auto max-w-[1560px]">
-                            <div class="site-header__shell grid gap-4 rounded-[1.6rem] px-4 py-3 transition duration-300 xl:grid-cols-[auto_1fr_auto] xl:items-center">
-                                <a href="./index.html" data-aos="fade-up" class="inline-flex items-center">
-                                    <img src="./docs/assets/logo.png" alt="Appliance Repair Silver Spring logo"
-                                        class="h-8 w-auto sm:h-9" />
-                                </a>
+    <div class="site-header__inner mx-auto max-w-[1560px]">
+        <div class="site-header__shell rounded-[1.6rem] px-4 py-3 transition duration-300">
+            <div class="flex items-center justify-between gap-4">
+                <a href="./index.html" data-aos="fade-up" class="inline-flex items-center">
+                    <img src="./docs/assets/logo.png" alt="Appliance Repair Silver Spring logo"
+                        class="h-8 w-auto sm:h-9" />
+                </a>
 
-                                <nav data-aos="fade-up" data-aos-delay="80"
-                                    class="site-header__nav hidden items-center justify-center gap-1 rounded-full border border-white/12 bg-white/8 px-3 py-2 backdrop-blur-md lg:flex xl:mx-auto">
-                                    <a href="./index.html"
-                                        class="site-header__nav-link rounded-full px-4 py-2 text-sm font-medium text-white/78 transition hover:bg-white/10 hover:text-white">Home</a>
-                                    <a href="./about.html"
-                                        class="site-header__nav-link rounded-full px-4 py-2 text-sm font-medium text-white/78 transition hover:bg-white/10 hover:text-white">About</a>
-                                    <a href="./services.html"
-                                        class="site-header__nav-link rounded-full px-4 py-2 text-sm font-medium text-white/78 transition hover:bg-white/10 hover:text-white">Services</a>
-<a href="./faq.html"
-                                        class="site-header__nav-link site-header__nav-link--active rounded-full px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10">FAQ</a>
-                                    <a href="./contact.html"
-                                        class="site-header__nav-link rounded-full px-4 py-2 text-sm font-medium text-white/78 transition hover:bg-white/10 hover:text-white">Contact</a>
-                                </nav>
+                <nav data-aos="fade-up" data-aos-delay="80"
+                    class="site-header__nav hidden items-center justify-center gap-1 rounded-full border border-white/12 bg-white/8 px-3 py-2 backdrop-blur-md lg:flex lg:mx-auto">
+                    <a href="./index.html" class="site-header__nav-link rounded-full px-4 py-2 text-sm font-medium text-white/78 transition hover:bg-white/10 hover:text-white">Home</a>
+                    <a href="./about.html" class="site-header__nav-link rounded-full px-4 py-2 text-sm font-medium text-white/78 transition hover:bg-white/10 hover:text-white">About</a>
+                    <a href="./services.html" class="site-header__nav-link rounded-full px-4 py-2 text-sm font-medium text-white/78 transition hover:bg-white/10 hover:text-white">Services</a>
+                    <a href="./faq.html" class="site-header__nav-link site-header__nav-link--active rounded-full px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10">FAQ</a>
+                    <a href="./contact.html" class="site-header__nav-link rounded-full px-4 py-2 text-sm font-medium text-white/78 transition hover:bg-white/10 hover:text-white">Contact</a>
+                </nav>
 
-                                <a href="tel:2404387799" data-aos="zoom-in" data-aos-delay="140"
-                                    class="site-header__phone inline-flex items-center justify-center gap-3 rounded-full bg-white px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#0E152B] shadow-[0_14px_32px_rgba(8,16,33,0.18)] transition hover:bg-[#eef5fb] sm:px-2 md:pl-4 sm:text-sm xl:justify-self-end">
-                                    <span>Call Now</span>
-                                    <span class="site-header__phone-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#0E152B] text-white">
-                                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
+                <div class="flex items-center gap-3">
+                    <a href="tel:2404387799" data-aos="zoom-in" data-aos-delay="140"
+                        class="site-header__phone hidden lg:inline-flex items-center justify-center gap-3 rounded-full bg-white px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#0E152B] shadow-[0_14px_32px_rgba(8,16,33,0.18)] transition hover:bg-[#eef5fb] sm:px-2 md:pl-4 sm:text-sm xl:justify-self-end">
+                        <span>Call Now</span>
+                        <span
+                            class="site-header__phone-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#0E152B] text-white">
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </span>
+                    </a>
+
+                    <button id="menuBtn" type="button" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false"
+                        class="site-header__menu-btn relative inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/12 bg-white/8 text-white shadow-[0_14px_32px_rgba(8,16,33,0.18)] backdrop-blur-md lg:hidden">
+                        <i data-menu-open-icon class="fa-solid fa-bars-staggered text-sm"></i>
+                        <i data-menu-close-icon class="fa-solid fa-xmark absolute text-base opacity-0 scale-75"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobileMenu"
+                class="site-header__mobile-menu lg:hidden overflow-hidden max-h-0 opacity-0 pointer-events-none transition-all duration-300 ease-out">
+                <div class="site-header__mobile-panel mt-4 rounded-[1.5rem] border border-white/12 bg-white/8 p-3 shadow-[0_18px_40px_rgba(8,16,33,0.16)] backdrop-blur-md">
+                    <div class="flex flex-col gap-1">
+                        <a href="./index.html" class="site-header__mobile-link rounded-2xl px-4 py-3 text-sm font-medium">Home</a>
+                        <a href="./about.html" class="site-header__mobile-link rounded-2xl px-4 py-3 text-sm font-medium">About</a>
+                        <a href="./services.html" class="site-header__mobile-link rounded-2xl px-4 py-3 text-sm font-medium">Services</a>
+                        <a href="./faq.html" class="site-header__mobile-link site-header__mobile-link--active rounded-2xl px-4 py-3 text-sm font-medium">FAQ</a>
+                        <a href="./contact.html" class="site-header__mobile-link rounded-2xl px-4 py-3 text-sm font-medium">Contact</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
                     <div class="mx-auto flex min-h-[70vh] max-w-5xl flex-col items-center justify-center pt-24 text-center sm:pt-28 lg:pt-32">
                         <span data-aos="fade-up" class="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#9bc7ef] backdrop-blur-md">
@@ -394,4 +442,6 @@
 </body>
 
 </html>
+
+
 

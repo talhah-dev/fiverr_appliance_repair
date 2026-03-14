@@ -2,7 +2,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const siteLoader = document.getElementById("siteLoader");
 
   if (siteLoader) {
+    const loaderValue = siteLoader.querySelector("[data-loader-value]");
+    const loaderFill = siteLoader.querySelector("[data-loader-fill]");
+    const loaderRing = siteLoader.querySelector("[data-loader-ring]");
+    let loaderProgressDone = false;
+    let pageReady = document.readyState === "complete";
+    let loaderRemoved = false;
+
+    const updateLoaderProgress = (value) => {
+      const safeValue = Math.max(1, Math.min(100, value));
+      if (loaderValue) {
+        loaderValue.textContent = safeValue + "%";
+      }
+      if (loaderFill) {
+        loaderFill.style.width = safeValue + "%";
+      }
+      if (loaderRing) {
+        loaderRing.style.setProperty("--loader-progress", safeValue);
+      }
+    };
+
     const hideLoader = () => {
+      if (loaderRemoved || !pageReady || !loaderProgressDone) return;
+      loaderRemoved = true;
       siteLoader.classList.add("is-hidden");
       document.body.classList.remove("is-loading");
 
@@ -11,22 +33,51 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 460);
     };
 
+    updateLoaderProgress(1);
+
+    const progressDuration = 1800;
+    const progressStart = performance.now();
+
+    const animateProgress = (currentTime) => {
+      const progress = Math.min((currentTime - progressStart) / progressDuration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = Math.max(1, Math.round(eased * 100));
+      updateLoaderProgress(value);
+
+      if (progress < 1) {
+        requestAnimationFrame(animateProgress);
+      } else {
+        loaderProgressDone = true;
+        hideLoader();
+      }
+    };
+
+    requestAnimationFrame(animateProgress);
+
+    const markPageReady = () => {
+      pageReady = true;
+      hideLoader();
+    };
+
     if (document.readyState === "complete") {
-      window.setTimeout(hideLoader, 180);
+      window.setTimeout(markPageReady, 120);
     } else {
       window.addEventListener(
         "load",
         () => {
-          window.setTimeout(hideLoader, 180);
+          window.setTimeout(markPageReady, 120);
         },
         { once: true }
       );
-
-      // Fallback in case a third-party asset delays the load event too long.
-      window.setTimeout(hideLoader, 2200);
     }
-  }
 
+    window.setTimeout(() => {
+      loaderProgressDone = true;
+      pageReady = true;
+      updateLoaderProgress(100);
+      hideLoader();
+    }, 2800);
+  }
   if (window.Lenis) {
     new Lenis({
       autoRaf: true,
@@ -55,14 +106,18 @@ document.addEventListener("DOMContentLoaded", () => {
   if (menuBtn && mobileMenu) {
     const closeMenu = () => {
       menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.classList.remove("is-open");
+      document.body.classList.remove("is-mobile-menu-open");
       mobileMenu.classList.add("max-h-0", "opacity-0", "pointer-events-none");
-      mobileMenu.classList.remove("max-h-[75vh]", "opacity-100");
+      mobileMenu.classList.remove("max-h-[100dvh]", "opacity-100");
     };
 
     const openMenu = () => {
       menuBtn.setAttribute("aria-expanded", "true");
+      menuBtn.classList.add("is-open");
+      document.body.classList.add("is-mobile-menu-open");
       mobileMenu.classList.remove("max-h-0", "opacity-0", "pointer-events-none");
-      mobileMenu.classList.add("max-h-[75vh]", "opacity-100");
+      mobileMenu.classList.add("max-h-[100dvh]", "opacity-100");
     };
 
     closeMenu();
@@ -76,8 +131,27 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    mobileMenu.addEventListener("click", (event) => {
+      if (event.target === mobileMenu) {
+        closeMenu();
+      }
+    });
+
     mobileMenu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      const isOpen = menuBtn.getAttribute("aria-expanded") === "true";
+      if (!isOpen) return;
+      if (!siteHeader || siteHeader.contains(event.target)) return;
+      closeMenu();
     });
 
     window.addEventListener("resize", () => {
@@ -86,7 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
   const toTopBtn = document.getElementById("toTopBtn");
 
   if (toTopBtn) {
@@ -222,5 +295,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+
+
+
 
 
