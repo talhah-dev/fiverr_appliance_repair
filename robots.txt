@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://www.appliancerepairsilverspring.com/sitemap.xml
